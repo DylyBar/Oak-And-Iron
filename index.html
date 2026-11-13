@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Oak & Iron">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#2b1d14">
+    <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAADbElEQVR4nO3doY4UWQCG0R6CJNkxWIKFRTAvwAuQABaHJZA1ZAVBTxBYHgCHxfACCAQJCQKCQZHNGjCb4MGt61uTrmK6+5tzbE11apIvV/ypmT54cOvo5woizm37AWBJgiZF0KQImhRBkyJoUgRNyvmpH3j+9NJpPAec2MPHX9dec0KTImhSBE2KoEkRNCmCJmVythu5ee/jUs8B/3v94trG9zqhSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJoUQZMiaFIETYqgSRE0KYImRdCkCJqUWX/1Tdvrd1+G19++/7T22vH920s/zok4oUkRNCmCJkXQpAiaFEGTImhScjv04aPLG9/7z7/fN773wssfG9+7TaOtebQzr1bb25pHnNCkCJoUQZMiaFIETYqgSdnL2W7ONPe7/Lh7YXh9W7PePr4COocTmhRBkyJoUgRNiqBJETQpgiZlJ3foqU33cMZnz3lFdI7fuVPXXgGdwwlNiqBJETQpgiZF0KQImpSdnO2mbGt625az9groHE5oUgRNiqBJETQpgiZF0KQImpSd3KGnXqWcehVzF039Tl4BXYYTmhRBkyJoUgRNiqBJETQpOznbTRlNYNua9ObMcquVV0CX4oQmRdCkCJoUQZMiaFIETYqgSdnLHXpkcg9+cW3ttSd/j1/T/PDt5/rPnbEzr1a25qU4oUkRNCmCJkXQpAiaFEGTImhScjv0lNHWfPzsz/HNV1+tvWRn3g1OaFIETYqgSRE0KYImRdCknLnZbmTq9dHjZ3fWX7v/ceGnYRNOaFIETYqgSRE0KYImRdCkCJqUM7dD37jyx9prbz7/N7z35r31W/Po3yNM3ctynNCkCJoUQZMiaFIETYqgScnNdn/dOBxen5rmNjU1y5n1TocTmhRBkyJoUgRNiqBJETQpgiZlL3fo0aY7tedev3iw9OOciJ35dDihSRE0KYImRdCkCJoUQZOyl7PdnAls9AX07D8nNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTImhSBE2KoEkRNCmCJkXQpAiaFEGTMuu/j059ITucNic0KYImRdCkCJoUQZMiaFIETcrBg1tHvhaKDCc0KYImRdCkCJoUQZMiaFJ+AQpthPEP9lXOAAAAAElFTkSuQmCC">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAADa0lEQVR4nO3doYpUYRiAYVeMglusYlU3uDewN7CwWm1WUSxiELMYrF7ANqvFGzAYBMGgWEwiFi2Cfb2D87OeGefMvs9Tf89wDC8/fN+ws3P/aP/kHESd3/QLwCYJgDQBkCYA0gRAmgBIEwBpF0b/4OXzK//jPWAtHjz5NnnuBiBNAKQJgDQBkCYA0gRAmgBIG+4BRg7vflrFe8A/eXO8N+t5NwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA2uy/C0Tbm/dfJ8/fffg8ef7s3q1Vvs6puQFIEwBpAiBNAKQJgDQBkCYA0s78HmD30dVZz3//8WvW8xdf/Zn1/KZt+5x/xA1AmgBIEwBpAiBNAKQJgDQBkLb1e4C5c/51+3Pn4uT5pvcEZ33OP+IGIE0ApAmANAGQJgDSBECaAEhb/B5gNEffnfn5c7/vP9e69wT1Of+IG4A0AZAmANIEQJoASBMAaQIgbfF7gJFNz/E3zZx/HjcAaQIgTQCkCYA0AZAmANIEQNri9wCj78OPvk+/dKP/nzn/erkBSBMAaQIgTQCkCYA0AZAmANIWvwcYWfqewJx/2dwApAmANAGQJgDSBECaAEgTAGlbvwcYGc7hj/cmz58+np7Df/x5Mv355vyL5gYgTQCkCYA0AZAmANIEQJoASDvze4CR0Zz/2Ysb0x9w/fXksTn/srkBSBMAaQIgTQCkCYA0AZAmANLye4CR8Z7g9vT5vU8rfBtWzQ1AmgBIEwBpAiBNAKQJgDQBkJbfAxxcuzR5/vbL78nzw7vTc/7R3x0aPc96uQFIEwBpAiBNAKQJgDQBkCYA0s78HuDhwe7k+WjOP5c9wbK5AUgTAGkCIE0ApAmANAGQJgDStn4PMHeOfvPyzipf59TM+TfLDUCaAEgTAGkCIE0ApAmANAGQtvV7gLlz9I8/T1b0JmwjNwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRAmgBIEwBpAiBNAKQJgDQBkCYA0gRA2uzfBxj9Ti8smRuANAGQJgDSBECaAEgTAGkCIG3n/tG+H8olyw1AmgBIEwBpAiBNAKQJgDQBkPYXGWCFCX79wTQAAAAASUVORK5CYII=">
+    <title>Oak & Iron</title>
+
+    <!-- ==================================================================
+         STYLES
+         ================================================================== -->
+    <link rel="stylesheet" href="css/style.css?v=1.9.0">
+  </head>
+
+  <body>
+    <!-- Game layout: canvas, chat log, floating buttons and side panel -->
+    <div id="wrap">
+      <div id="left">
+        <canvas id="c"></canvas>
+        <div id="dlg"></div>
+        <div id="mw">
+          <div id="mapViewport">
+            <div id="mapLayer">
+              <canvas id="mm" width="684" height="456"></canvas>
+              <div id="enemyMarkers"></div>
+              <div id="mineMarkers" aria-label="Mine entrances"></div>
+              <div id="graveMarker" title="Your gravestone — recover your items here" aria-label="Your gravestone">†</div>
+              <div id="pd"></div>
+              <div id="qd"></div>
+            </div>
+            <div id="mapZoom">
+              <button id="mapZoomOut" title="Zoom out" aria-label="Zoom out">−</button>
+              <span id="mapZoomLevel">100%</span>
+              <button id="mapZoomIn" title="Zoom in" aria-label="Zoom in">+</button>
+            </div>
+          </div>
+        </div>
+        <div id="quickMenu" class="quick-menu" data-open="false">
+          <div class="quick-menu-items" id="quickMenuItems" aria-hidden="true">
+            <button data-ic="gear" id="set_btn" title="Settings" aria-label="Settings"><span class="quick-label">Settings</span></button>
+            <button data-ic="person" id="ch_btn" title="Character" aria-label="Character"><span class="quick-label">Character</span></button>
+            <button data-ic="run" id="run_btn" title="Toggle run" aria-label="Toggle run"><span class="quick-label">Run</span></button>
+            <button data-ic="tap" id="act_mode_btn" title="Tap Mode: Direct Action vs Options Menu" aria-label="Tap mode"><span class="quick-label">Tap mode</span></button>
+            <button data-ic="map" id="map_btn" title="Toggle Map" aria-label="Map"><span class="quick-label">Map</span></button>
+            <button data-ic="skills" id="sq_btn" title="Skills" aria-label="Skills"><span class="quick-label">Skills</span></button>
+            <button data-ic="quests" id="quest_btn" title="Quests" aria-label="Quests"><span class="quick-label">Quests</span></button>
+            <button data-ic="pack" id="bp" title="Inventory" aria-label="Inventory"><span class="quick-label">Inventory</span></button>
+          </div>
+          <button id="quickMenuToggle" class="quick-menu-toggle" type="button" aria-label="Open game menu" aria-expanded="false" aria-controls="quickMenuItems" title="Game menu">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+        <div id="chat"></div>
+      </div>
+      <div id="side">
+        <button id="cx" style="width:100%;margin-bottom:8px">Close</button>
+        <div id="tabs">
+          <button id="t1" class="on">Bag</button>
+        <button id="t3">Gear</button>
+        </div>
+        <div id="inv"></div>
+        <div id="gr"></div>
+        <section id="skillsPanel"><h3>Skills</h3><div id="sk"></div></section>
+        <section id="questsPanel"><h3>Quests</h3><div id="qu"></div></section>
+        <div class="row">
+        <button id="sv">Save</button>
+        <button id="zi">+</button>
+        <button id="zo">-</button>
+        </div>
+      </div>
+    </div>
+    <!-- Title / play screen (no account needed) -->
+    <div id="title">
+      <div class="titleInner">
+        <div class="titleBadge" data-ic="swords" data-big="1"></div>
+        <h1 class="gameTitle">Oak &amp; Iron</h1>
+        <p class="titleSub">An island realm of quests, craft & discovery</p>
+        <div class="titleMenu">
+          <button id="t_play">Play</button>
+          <button id="t_new" style="display:none">New Game</button>
+          <div class="trow">
+            <button id="t_settings" data-ic="gear"> Settings</button>
+            <button id="t_music" data-ic="note"> Music: ON</button>
+          </div>
+        </div>
+        <p id="t_now" class="titleNow"></p>
+        <p class="titleNote">No account needed — just play.<br><span>Click to enable sound</span></p>
+      </div>
+    </div>
+
+    <!-- Context menu and modal windows -->
+    <div id="m"></div>
+    <div id="cc" class="ov"></div>
+    <div id="shop" class="ov"></div>
+    <div id="smithing" class="ov"></div>
+    <div id="char_modal" class="ov">
+      <div class="box">
+        <h2>Character</h2>
+        <div id="chbody"></div>
+        <button id="cls_ch" style="margin-top:8px">Close</button>
+      </div>
+    </div>
+    <div id="settings_modal" class="ov">
+      <div class="box">
+        <h2>Settings</h2>
+        <div id="setx"></div>
+        <div class="row">
+          <button id="snd_btn">Sound: ON</button>
+        </div>
+        <div class="row">
+          <button id="sv_btn_st">Save Game</button>
+        </div>
+        <div class="row">
+          <button id="pause_btn">Pause game</button>
+        </div>
+        <h3>Save data</h3>
+        <div class="row">
+          <button id="exp_btn">Export save</button>
+          <button id="imp_btn">Import save file</button>
+          <button id="imp_paste">Paste save code</button>
+        </div>
+        <input id="imp_file" type="file" accept=".oaksave,.txt,.json" style="display:none">
+        <p id="ver_line" class="ver"></p>
+        <button id="cls_set">Close</button>
+      </div>
+    </div>
+
+    <button id="dodge_btn" class="dodge-btn" type="button" aria-label="Dodge (Space or Shift)">DODGE</button>
+
+    <!-- Death / respawn screen -->
+    <div id="death" class="ov">
+      <div class="box">
+        <h2>You Died</h2>
+        <div class="cause" id="deathCause"></div>
+        <div class="items" id="deathItems"></div>
+        <button id="respawn">Respawn</button>
+      </div>
+    </div>
+
+    <script src="js/00-platform.js?v=1.9.0"></script>
+    <script src="js/01-config-sound.js?v=1.9.0"></script>
+    <script src="js/02-world.js?v=1.9.0"></script>
+    <script src="js/03-data.js?v=1.9.0"></script>
+    <script src="js/04-sprites.js?v=1.9.0"></script>
+    <script src="js/05-item-art.js?v=1.9.0"></script>
+    <script src="js/06-drops.js?v=1.9.0"></script>
+    <script src="js/07-audio-chat.js?v=1.9.0"></script>
+    <script src="js/08-entities.js?v=1.9.0"></script>
+    <script src="js/09-actions.js?v=1.9.0"></script>
+    <script src="js/10-ui-panels.js?v=1.9.0"></script>
+    <script src="js/11-render-base.js?v=1.9.0"></script>
+    <script src="js/12-render-objects.js?v=1.9.0"></script>
+    <script src="js/13-render-loop.js?v=1.9.0"></script>
+    <script src="js/14-save-controls.js?v=1.9.0"></script>
+    <script src="js/15-music-menus.js?v=1.9.0"></script>
+    <script src="js/15b-hotbar.js?v=1.9.0"></script>
+    <script src="js/16-boot-touch.js?v=1.9.0"></script>
+  </body>
+</html>
